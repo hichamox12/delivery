@@ -1,0 +1,127 @@
+Remove default margin and padding from the body and html
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Main navbar styling */
+.navbar {
+  background-color: #000; /* Black background */
+  width: 100%; /* Ensure the navbar takes the full width */
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Logo styling */
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Centered links */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1; /* Allow links to take up space evenly */
+}
+
+.navbar-links li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform: perspective(200px) translateZ(0); /* 3D text effect */
+}
+
+.navbar-links li:hover {
+  color: #facc15; /* Yellow color on hover */
+  transform: perspective(200px) translateZ(10px); /* 3D pop-out effect */
+}
+
+/* Right-aligned items: language, help, sign in, sign up */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-item {
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-button {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px; /* Fully rounded corners */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #eee;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hamburger Icon styling */
+.hamburger-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}

@@ -1,0 +1,161 @@
+/* Ensure the layout covers the full height of the screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: inherit; /* Ensure consistent box sizing for all elements */
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+    margin: 0;
+  }
+  
+  .content {
+    flex: 1; /* This will push the footer to the bottom if there isn't enough content */
+    padding: 20px;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footerTop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .footerLogo {
+    max-width: 300px;
+  }
+  
+  .footerSections {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .footerSection {
+    flex: 1;
+    padding: 0 15px;
+  }
+  
+  .footerSection h4 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .footerSection ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footerSection ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footerSection ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footerSection ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack them on top of each other */
+    margin-top: 20px; /* Adjust margin */
+  }
+  
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some space between social media and store buttons */
+  }
+  
+  .socialMedia a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .storeButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space between social media and store buttons */
+  }
+  
+  .storeButtons a {
+    margin: 0 10px;
+  }
+  
+  .storeButtons a img {
+    width: 150px;
+  }
+  
+  .footerLanguageLocation {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    opacity: 0.8;
+  }
+  
+  .footerLanguageLocation span {
+    margin: 0 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footerTop {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footerSections {
+      flex-direction: column;
+    }
+  
+    .footerSection {
+      margin-bottom: 30px;
+    }
+  
+    .footerBottom {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+  
+    .storeButtons a img {
+      width: 120px;
+      margin: 10px 0;
+    }
+  }
+  

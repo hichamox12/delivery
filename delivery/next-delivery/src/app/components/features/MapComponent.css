@@ -1,0 +1,101 @@
+/* General container for the entire map section */
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .location-input {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    width: 300px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .map-and-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .map {
+    width: 70%;
+    height: 600px; /* Increased height for better visibility */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .route-info {
+    width: 28%;
+    max-height: 600px; /* Match the height of the map */
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .route-info h2 {
+    margin-top: 0;
+    font-size: 1.25em;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  .route-info ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .route-info li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .distance-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.25em;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .distance-container p {
+    margin: 0;
+  }
+  
